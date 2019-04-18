@@ -4,15 +4,26 @@
 #include <fstream>
 #include "../objects/gameobject.h"
 
-
-
-
-
-class DataStorage
+namespace engine
 {
-public:
-    DataStorage();
-    std::map<std::string, GameObject*> gameObjects;
-};
+    struct Window
+    {
+        std::string name;
+        int width;
+        int height;
+    };
+    
+    const Window HD_Window = {"HD", 1280, 720}
+    const Window Full_HD_Window = {"HD", 1920, 1080}
+    
+    class Datastorage
+    {
+       
+    public:
+        DataStorage(Window window = HD_window);
+        ~DataStorage();
+        std::map<std::string, GameObject>& getGameObjects();
 
-#endif // DATASTORAGE_H
+        std::map<std::string, GameObject> gameObjects;
+        
+#endif 
