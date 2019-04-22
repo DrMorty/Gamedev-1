@@ -8,6 +8,11 @@ namespace engine
   Datastorage::~DataStorage()
   {}
   
+  sf::RenderWindow& DataStorage::window()
+    {
+        return window;
+    }
+  
   std::map<std::string, GameObject>& DataStorage::getGameObjects()
     {
         return gameObjects;
