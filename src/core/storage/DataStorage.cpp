@@ -13,8 +13,8 @@ namespace engine
         return window;
     }
   
-  std::map<std::string, GameObject>& DataStorage::getGameObjects()
+  std::map<std::string, GameObject>& DataStorage::objects()
     {
-        return gameObjects;
+        return objects;
     }
 }
